@@ -53,6 +53,29 @@
 .saved-item-actions{display:flex;flex-wrap:wrap;gap:8px}
 .empty-state{border:1px dashed var(--line);border-radius:12px;padding:20px;text-align:center;color:var(--muted)}
 @media(max-width:760px){.main-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:10px 0 13px}.nav-btn{min-height:48px;padding:9px 7px;font-size:12px;gap:6px;border-radius:12px}.nav-icon{font-size:19px}.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dashboard-tile{min-height:126px;padding:12px 7px}.dashboard-tile .tile-icon{width:42px;height:42px;font-size:24px}.dashboard-tile b{font-size:13px}.dashboard-tile small{font-size:10px}.saved-values{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h1{font-size:clamp(25px,6vw,38px)}}
+
+
+/* v11: large, icon-led dashboard cards inspired by the reference home screen */
+.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 20px}
+.dashboard-tile{min-height:174px;padding:22px 18px;gap:10px;border-radius:20px;border:1px solid #d6e8e5;background:linear-gradient(145deg,#ffffff 0%,#f2faf7 100%);box-shadow:0 7px 20px rgba(0,63,61,.075);position:relative;overflow:hidden}
+.dashboard-tile:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#d4eae4;transition:background .18s}
+.dashboard-tile:hover:before,.dashboard-tile:focus-visible:before{background:var(--mint)}
+.dashboard-tile.cutting-tile{background:linear-gradient(145deg,#e0fbf2,#ffffff 82%);border-color:#8ddfc9}
+.dashboard-tile.cutting-tile:before{background:var(--mint)}
+.tile-icon{width:62px;height:62px;display:grid;place-items:center;border-radius:18px;background:#e4f7f1;color:var(--green);font-size:34px;flex:0 0 auto}
+.tile-icon svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round}
+.tile-icon svg path:not(.icon-line){fill:currentColor;stroke:currentColor}
+.tile-icon svg .icon-line{fill:none;stroke:currentColor}
+.dashboard-tile b{font-size:17px;line-height:1.25;color:#143e3d;font-weight:800}
+.dashboard-tile small{font-size:12px;line-height:1.35;color:#6b8189}
+.dashboard-tile.saved-tile{background:linear-gradient(145deg,#f1f5ff,#fff);border-color:#d9e1f4}
+.dashboard-tile.saved-tile .tile-icon{background:#e7edff;color:#36578a}
+.home-quick-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 18px}
+.home-quick-links button{min-height:82px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);box-shadow:0 4px 12px #003f3d08;font-weight:750}
+.home-quick-links button span{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:#e7f7f2;color:var(--green);font-size:22px}
+@media(max-width:700px){.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 16px}.dashboard-tile{min-height:148px;padding:16px 9px;gap:8px;border-radius:16px}.tile-icon{width:52px;height:52px;border-radius:15px}.tile-icon svg{width:32px;height:32px}.dashboard-tile b{font-size:13px}.dashboard-tile small{font-size:10px}.home-quick-links{gap:8px}.home-quick-links button{min-height:72px;font-size:11px}}
+@media(max-width:360px){.dashboard-tile{min-height:140px;padding:13px 6px}.dashboard-tile b{font-size:12px}.dashboard-tile small{font-size:9px}.tile-icon{width:46px;height:46px}.tile-icon svg{width:29px;height:29px}}
+
 </style>
 </head>
 <body>
@@ -63,10 +86,10 @@
 <div class="page-intro home-intro"><div class="intro-symbol">MC</div><div><h2>M Corporation</h2><p>Steel Solutions for a Stronger Tomorrow</p></div><span class="pill">STEEL • TRUST • GROWTH</span></div>
 <div class="home-visual-banner"><div class="home-banner-copy"><span class="banner-kicker">STEEL SOLUTIONS</span><h2>সঠিক হিসাব<br>সঠিক মূল্য<br>বিশ্বাসের সাথে</h2><p>Cutting • Weight • Cost • Estimate</p></div><div class="steel-stack-art" aria-label="Steel beams and sections illustration"><svg viewBox="0 0 440 180" role="img" aria-label="Stacked steel beams"><defs><linearGradient id="beamTop" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5fbff"/><stop offset=".45" stop-color="#9eafb9"/><stop offset="1" stop-color="#536a78"/></linearGradient><linearGradient id="beamSide" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7f929d"/><stop offset="1" stop-color="#253e4a"/></linearGradient></defs><g opacity=".98"><path d="M45 111 L278 58 L394 87 L160 143Z" fill="url(#beamTop)"/><path d="M160 143 L394 87 L394 111 L160 169Z" fill="url(#beamSide)"/><path d="M45 111 L160 143 L160 169 L45 137Z" fill="#344d59"/><path d="M80 79 L293 31 L366 49 L152 99Z" fill="url(#beamTop)"/><path d="M152 99 L366 49 L366 69 L152 119Z" fill="url(#beamSide)"/><path d="M80 79 L152 99 L152 119 L80 99Z" fill="#415967"/><path d="M114 49 L274 14 L329 28 L168 64Z" fill="url(#beamTop)"/><path d="M168 64 L329 28 L329 43 L168 80Z" fill="url(#beamSide)"/><path d="M114 49 L168 64 L168 80 L114 65Z" fill="#526b78"/></g><g stroke="#d7e6ed" stroke-width="2" fill="none" opacity=".6"><path d="M80 79 L293 31 L366 49"/><path d="M45 111 L278 58 L394 87"/><path d="M114 49 L274 14 L329 28"/></g></svg></div><div class="banner-glow"></div></div>
 <div class="dashboard-grid">
-<button class="dashboard-tile cutting-tile" data-target="cutting" type="button"><span class="tile-icon">◩</span><b>Steel Cutting Calculator</b><small>Cutting • Weight • Cost</small></button>
-<button class="dashboard-tile" data-target="weight" type="button"><span class="tile-icon">⚖</span><b>Steel Weight Calculator</b><small>Weight • Size • Total</small></button>
-<button class="dashboard-tile" data-target="estimate" type="button"><span class="tile-icon">▤</span><b>Price Estimate</b><small>Total Cost • Party Quotation</small></button>
-<button class="dashboard-tile" id="homeNormalCalc" type="button"><span class="tile-icon">▦</span><b>Normal Calculator</b><small>Quick arithmetic</small></button><button class="dashboard-tile saved-tile" data-target="saved" type="button"><span class="tile-icon">▣</span><b>Saved Calculations</b><small>History • Reuse • Manage</small></button>
+<button class="dashboard-tile cutting-tile" data-target="cutting" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 11h34v7H7zM20 18h8v12h-8zM7 30h34v7H7z"/><path d="M11 7l5-4m21 4l-5-4M11 41l5 4m21-4l-5 4" class="icon-line"/></svg></span><b>Steel Cutting Calculator</b><small>Cutting • Weight • Cost</small></button>
+<button class="dashboard-tile" data-target="weight" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6v31M13 11h22M18 11l-8 15h16L18 11zm20 0l-8 15h16L38 11zM15 42h18"/></svg></span><b>Steel Weight Calculator</b><small>Weight • Size • Total</small></button>
+<button class="dashboard-tile" data-target="estimate" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 4h19l7 7v33H12zM31 4v8h7M18 20h14M18 27h14M18 34h10"/></svg></span><b>Price Estimate</b><small>Total Cost • Party Quotation</small></button>
+<button class="dashboard-tile" id="homeNormalCalc" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="4" width="30" height="40" rx="5"/><rect x="15" y="10" width="18" height="8" rx="1"/><path d="M16 25h3m5 0h3m5 0h1M16 31h3m5 0h3m5 0h1M16 37h3m5 0h3m5 0h1"/></svg></span><b>Normal Calculator</b><small>Quick arithmetic</small></button><button class="dashboard-tile saved-tile" data-target="saved" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M15 5h18v8H15zM10 9H7v35h34V9h-3M14 21h20M14 28h20M14 35h13"/></svg></span><b>Saved Calculations</b><small>History • Reuse • Manage</small></button>
 </div>
 <div class="home-quick-links"><button type="button" data-home-info="About M Corporation|Steel Solutions for a Stronger Tomorrow. This app helps with steel cutting, theoretical weight and customer price estimates."><span>ⓘ</span><b>About Us</b></button><button type="button" data-home-info="Settings|Use the unit dropdown beside each dimension. Calculations run on this device; review commercial weights with supplier or scale data."><span>⚙</span><b>Settings</b></button><button type="button" data-home-info="Help|Choose a calculator, enter dimensions and quantities, then calculate. Use Price Estimate to prepare a shareable customer quotation."><span>?</span><b>Help</b></button></div>
 <div class="dashboard-bottom"><div class="feature-card"><span>◎</span><b>Accurate & reliable</b><p>Clear steel calculations and cost breakdowns.</p></div><div class="feature-card"><span>ϟ</span><b>Fast & easy</b><p>Designed for everyday steel business use.</p></div><div class="feature-card"><span>▯</span><b>Works on all devices</b><p>Mobile, tablet and desktop.</p></div></div>
