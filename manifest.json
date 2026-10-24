@@ -1,0 +1,25 @@
+{
+  "name": "MC CutPro MC CutPro Steel Calculator",
+  "short_name": "M Corp Steel Tools",
+  "description": "MC CutPro steel cutting, weight and customer price estimate tools.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f6f8",
+  "theme_color": "#00594b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
