@@ -123,14 +123,19 @@
  #homePage .home-app-grid .dashboard-tile b,#homePage .home-app-grid button[data-home-info] b{font-size:9px}
 }
 
+
+/* v13: icon-only home navigation; remove redundant text tab row */
+.main-nav{display:none!important}
+#homePage .home-app-grid .home-home-tile .tile-icon svg{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+#homePage .home-app-grid .home-home-tile b{font-size:11px;line-height:1.2}
 </style>
 </head>
 <body>
 <header class="hero"><div class="hero-inner"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="130 30"/><path d="M12 39h40M17 36l22-19h12L29 36M20 42l-3 7h27l8-7" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/><circle cx="34" cy="31" r="5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M45 12l-3 7m10-2-6 6m8 2-7 3" stroke="#ffb52e" stroke-width="3" stroke-linecap="round"/></svg></div><div class="hero-copy"><div class="brand-name">MC CUTPRO</div><h1>Steel <span>CutPro</span></h1><p>Steel Cutting &amp; Estimation Suite</p><div class="hero-tags"><span>Cutting</span><i>•</i><span>Weight</span><i>•</i><span>Cost</span><i>•</i><span>Estimate</span></div></div><button class="hero-calc" type="button" id="openCalcPopup" aria-haspopup="dialog" aria-controls="calcModal"><span>▦</span><b>Normal<br>Calculator</b></button></div></header>
 <main>
-<nav class="main-nav" aria-label="Main navigation"><button class="nav-btn" data-target="home"><span class="nav-icon">⌂</span><span>Home</span></button><button class="nav-btn" data-target="cutting"><span class="nav-icon">◩</span><span>Steel Cutting Calculator</span></button><button class="nav-btn" data-target="weight"><span class="nav-icon">⚖</span><span>Steel Weight Calculator</span></button><button class="nav-btn" data-target="estimate"><span class="nav-icon">▤</span><span>Price Estimate</span></button><button class="nav-btn" data-target="saved"><span class="nav-icon">▣</span><span>Saved Calculations</span></button></nav>
 <section class="tool-page page-active" data-page="home" id="homePage">
 <div class="dashboard-grid home-app-grid">
+<button class="dashboard-tile home-home-tile" data-target="home" type="button" aria-label="Home"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M5 22 24 6l19 16"/><path d="M10 20v22h28V20M19 42V28h10v14"/></svg></span><b>Home</b></button>
 <button class="dashboard-tile cutting-tile" data-target="cutting" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 11h34v7H7zM20 18h8v12h-8zM7 30h34v7H7z"/><path d="M11 7l5-4m21 4l-5-4M11 41l5 4m21-4l-5 4" class="icon-line"/></svg></span><b>Steel Cutting Calculator</b><small>Cutting • Weight • Cost</small></button>
 <button class="dashboard-tile" data-target="weight" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6v31M13 11h22M18 11l-8 15h16L18 11zm20 0l-8 15h16L38 11zM15 42h18"/></svg></span><b>Steel Weight Calculator</b><small>Weight • Size • Total</small></button>
 <button class="dashboard-tile" data-target="estimate" type="button"><span class="tile-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 4h19l7 7v33H12zM31 4v8h7M18 20h14M18 27h14M18 34h10"/></svg></span><b>Price Estimate</b><small>Total Cost • Party Quotation</small></button>
