@@ -7,3 +7,5 @@ Upload the contents of this ZIP to the repository root, preserving `manifest.jso
 
 ## Testing note
 ZIP integrity and JavaScript syntax should be checked before deployment. This package has not been exhaustively browser-tested on every device; use a test repository first and verify calculations against known steel weights before commercial use.
+
+Version 14: added Home return controls and persistent bottom quick navigation.
