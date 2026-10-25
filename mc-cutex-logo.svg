@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MC CUTEX steel I-beam emblem">
- <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102b46"/><stop offset="1" stop-color="#1769aa"/></linearGradient><linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".32" stop-color="#c9d5df"/><stop offset=".62" stop-color="#8d9eae"/><stop offset="1" stop-color="#eef4f8"/></linearGradient></defs>
- <rect x="12" y="12" width="488" height="488" rx="112" fill="url(#bg)"/>
- <path d="M104 112h304v58H285v172h123v58H104v-58h123V170H104z" fill="url(#steel)" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
- <path d="M329 245l27 27 62-71" fill="none" stroke="#5cb5f3" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
- <path d="M103 112h304M104 400h304" stroke="#f7fbff" stroke-opacity=".7" stroke-width="5"/>
-</svg>
