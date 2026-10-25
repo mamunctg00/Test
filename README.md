@@ -31,3 +31,10 @@ Upload the ZIP contents to the repository root, preserving the `icons/` folder, 
 - Removed the duplicate Normal Calculator tile from the Home dashboard and removed its click handler. The header Normal Calculator popup remains.
 - Updated the manifest and service-worker cache version; paths remain relative for GitHub Pages subdirectory deployment.
 - Browser/Android end-to-end tests remain pending; follow the test checklist before live deployment.
+
+
+### Home page install-row cleanup (v15 follow-up)
+- Install card is hidden by default and appears only when the browser fires `beforeinstallprompt` (a real native install prompt is available).
+- If the browser does not support the prompt, or the app is already installed, the install button and its entire row remain hidden; no fallback text row is shown.
+- Added SVG logo fallback for header, home intro, and About page if the PNG asset fails to load.
+- When deploying to GitHub Pages, upload the complete ZIP contents, including the `icons/` folder, `manifest.json`, and `sw.js`; uploading only `index.html` will cause broken image assets.

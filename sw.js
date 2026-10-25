@@ -1,5 +1,5 @@
 /* MC CUTEX v15 lightweight app-shell cache. Keep cache names versioned. */
-const CACHE_NAME = 'mc-cutex-shell-v15-logo2';
+const CACHE_NAME = 'mc-cutex-shell-v15-install-cleanup';
 const APP_ROOT = new URL('./', self.registration.scope);
 const APP_FILES = [
   new URL('./', self.registration.scope).href,
